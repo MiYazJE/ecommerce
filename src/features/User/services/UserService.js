@@ -1,9 +1,8 @@
 import axios from 'axios'
-import { BASE_API_URL } from 'common/constants/paths'
 
 export default class UserService {
   async signIn({ username, password }) {
-    const { data: users } = await axios.get(`${BASE_API_URL}/users`)
+    const { data: users } = await axios.get(`/users`)
 
     const userExists = users.find(
       (user) => user.username === username && password === password
@@ -15,7 +14,7 @@ export default class UserService {
   }
 
   async signUp({ username, password }) {
-    await axios.post(`${BASE_API_URL}/users`, {
+    await axios.post(`/users`, {
       username,
       password
     })

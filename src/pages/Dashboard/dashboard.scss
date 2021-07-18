@@ -7,6 +7,8 @@
 
   .dashboard-content {
     padding: 2em;
+    box-sizing: border-box;
+    overflow: auto;
 
     .dashboard-content-header {
       display: flex;

@@ -29,12 +29,19 @@
       "username": "juanico",
       "password": "Juanico21!",
       "id": 6
+    },
+    {
+      "username": "pepe",
+      "password": "Gedesco21!",
+      "id": 7
     }
   ],
   "customers": [
     {
       "id": 1,
-      "name": "Mercadona SL"
+      "name": "Mercadona SL",
+      "address": "Valencia",
+      "phone": "961758478"
     }
   ],
   "products": [

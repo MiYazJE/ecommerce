@@ -46,7 +46,7 @@ const SignIn = () => {
 
   useEffect(() => {
     if (userLoggedSuccess) {
-      history.push(ROUTES.DASHBOARD)
+      history.push(ROUTES.CUSTOMERS)
     }
   }, [userLoggedSuccess])
 
