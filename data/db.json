@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "ruben",
+      "password": "holamundo"
+    },
+    {
+      "id": 2,
+      "username": "pepe",
+      "password": "pepito"
+    },
+    {
+      "username": "caca",
+      "password": "Gedesco21!",
+      "id": 3
+    },
+    {
+      "username": "joselico",
+      "password": "Joselico21!",
+      "id": 4
+    },
+    {
+      "username": "pepe",
+      "password": "Gedesco21!",
+      "id": 5
+    },
+    {
+      "username": "juanico",
+      "password": "Juanico21!",
+      "id": 6
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Mercadona SL"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Papas de jamón"
+    }
+  ]
+}

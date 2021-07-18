@@ -1,0 +1,17 @@
+@import '../../styles/variables';
+
+.dashboard {
+  display: grid;
+  height: calc(100vh - #{$header-height});
+  grid-template-columns: 100px auto;
+
+  .dashboard-content {
+    padding: 2em;
+
+    .dashboard-content-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

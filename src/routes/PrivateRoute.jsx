@@ -1,33 +1,29 @@
 import React from 'react'
-import { useState } from 'react'
 import { Route, Redirect } from 'react-router-dom'
 import ROUTES from 'common/constants/paths'
+import { useSelector } from 'react-redux'
+import { userSelector } from 'features/User/redux/selectors/userSelectors'
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
-  const [isAuth] = useState(false)
-  const [loading] = useState(false)
+  const { logged } = useSelector(userSelector)
 
   return (
     <>
-      {loading ? (
-        <div>user loading...</div>
-      ) : (
-        <Route
-          {...rest}
-          render={(props) =>
-            isAuth ? (
-              <Component {...props} />
-            ) : (
-              <Redirect
-                to={{
-                  pathname: ROUTES.SIGN_IN,
-                  state: { from: props.location }
-                }}
-              />
-            )
-          }
-        />
-      )}
+      <Route
+        {...rest}
+        render={(props) =>
+          logged ? (
+            <Component {...props} />
+          ) : (
+            <Redirect
+              to={{
+                pathname: ROUTES.SIGN_IN,
+                state: { from: props.location }
+              }}
+            />
+          )
+        }
+      />
     </>
   )
 }

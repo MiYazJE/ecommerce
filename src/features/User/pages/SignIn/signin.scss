@@ -1,0 +1,19 @@
+@import '../../../../styles/variables';
+
+.wrap-signIn {
+  width: 100%;
+  height: calc(100vh - #{$header-height});
+  display: grid;
+  place-items: center;
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    min-height: 300px;
+    max-width: 1000px;
+    min-width: 400px;
+    gap: 20px;
+  }
+}

@@ -1,3 +1,4 @@
+import Header from 'common/components/Header/Header'
 import ROUTES from 'common/constants/paths'
 import SignIn from 'features/User/pages/SignIn/SignIn'
 import SignUp from 'features/User/pages/SignUp/SignUp'
@@ -13,6 +14,7 @@ import PrivateRoute from './PrivateRoute'
 const Routes = () => {
   return (
     <Router>
+      <Header />
       <Switch>
         <Route exact={true} path={ROUTES.SIGN_IN} component={SignIn} />
         <Route exact={true} path={ROUTES.SIGN_UP} component={SignUp} />

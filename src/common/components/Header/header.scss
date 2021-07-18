@@ -1,0 +1,48 @@
+@import '../../../styles/variables';
+
+.header {
+  height: $header-height;
+  background-color: $header-background;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+
+  .nav {
+    
+    ul {
+      display: flex;
+      list-style-type: none;
+      margin: 0px;
+    }
+
+    .nav-item {
+
+      &:not(:first-child) {
+        margin-left: 20px;
+      }
+      
+      .nav-link {
+        text-decoration: none;
+        color: #fff;
+        transition: all .2s ease;
+        border: 1px solid #fff;
+        border-radius: 4px;
+        padding: 10px;
+        
+        &:hover {
+          color: $header-background;
+          background-color: #fff;
+        }
+      }
+      
+      .active {
+        color: $header-background;
+        background-color: #fff;
+      }
+    }
+
+
+  }
+}
