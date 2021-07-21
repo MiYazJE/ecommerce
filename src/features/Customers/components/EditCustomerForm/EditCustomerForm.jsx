@@ -4,12 +4,10 @@ import Input from 'common/components/Input/Input'
 import { customerSchema } from 'features/Customers/constants/formValidations'
 import { customerSelector } from 'features/Customers/redux/selectors/customerSelectors'
 import { editCustomer } from 'features/Customers/redux/slices/customerSlice'
-import React from 'react'
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
+
 import { useForm } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux'
-
-import './../NewCustomerForm/customerForm.scss'
 
 const EditCustomerForm = ({ customer, onHide }) => {
   const dispatch = useDispatch()
@@ -32,7 +30,6 @@ const EditCustomerForm = ({ customer, onHide }) => {
 
   useEffect(() => {
     if (customerSuccessEdited) {
-      //trigger notification (toast)
       onHide()
     }
   }, [customerSuccessEdited])
@@ -42,7 +39,7 @@ const EditCustomerForm = ({ customer, onHide }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="newCustomer-form">
+    <form onSubmit={handleSubmit(onSubmit)} className="form">
       <Input
         placeholder="Enter your name"
         {...register('name')}

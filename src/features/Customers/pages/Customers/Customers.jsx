@@ -1,9 +1,9 @@
 import { Button, CircularProgress } from '@material-ui/core'
 import useCustomers from 'features/Customers/hooks/useCustomers'
-import React from 'react'
+import React, { useState } from 'react'
 import { DataGrid } from '@material-ui/data-grid'
 import customerColumns from 'features/Customers/constants/customerColumns'
-import { useState } from 'react'
+
 import Dialog from 'common/components/Dialog/Dialog'
 import NewCustomerForm from 'features/Customers/components/NewCustomerForm/NewCustomerForm'
 import DeleteIcon from '@material-ui/icons/Delete'
@@ -84,7 +84,7 @@ const Customers = () => {
       <Dialog
         open={showEditCustomerModal}
         onHide={onCustomerEdited}
-        title="New customer"
+        title="Edit customer"
       >
         <EditCustomerForm
           customer={selectedCustomer}

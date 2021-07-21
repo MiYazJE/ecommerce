@@ -4,12 +4,10 @@ import Input from 'common/components/Input/Input'
 import { customerSchema } from 'features/Customers/constants/formValidations'
 import { customerSelector } from 'features/Customers/redux/selectors/customerSelectors'
 import { createCustomer } from 'features/Customers/redux/slices/customerSlice'
-import React from 'react'
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
+
 import { useForm } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux'
-
-import './customerForm.scss'
 
 const CustomerForm = ({ onHide }) => {
   const dispatch = useDispatch()
@@ -31,8 +29,6 @@ const CustomerForm = ({ onHide }) => {
 
   useEffect(() => {
     if (customerSuccessCreated) {
-      console.log('success created')
-      //trigger notification (toast)
       onHide()
     }
   }, [customerSuccessCreated])
@@ -42,7 +38,7 @@ const CustomerForm = ({ onHide }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="newCustomer-form">
+    <form onSubmit={handleSubmit(onSubmit)} className="form">
       <Input
         placeholder="Enter your name"
         {...register('name')}

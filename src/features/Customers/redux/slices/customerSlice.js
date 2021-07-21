@@ -1,3 +1,4 @@
+import notification from 'common/utils/notification'
 import CustomerService from 'features/Customers/services/CustomerService'
 
 const { createSlice, createAsyncThunk } = require('@reduxjs/toolkit')
@@ -12,7 +13,12 @@ export const getCustomers = createAsyncThunk('customer/getAll', async () => {
 export const createCustomer = createAsyncThunk(
   'customer/create',
   async (customer, thunkApi) => {
-    await customerService.post(customer)
+    try {
+      await customerService.post(customer)
+      notification.success('The customer was created successfully.')
+    } catch (e) {
+      notification.error('Problems creating the customer, please try again.')
+    }
 
     thunkApi.dispatch(getCustomers())
   }
@@ -21,7 +27,12 @@ export const createCustomer = createAsyncThunk(
 export const editCustomer = createAsyncThunk(
   'customer/edit',
   async (customer, thunkApi) => {
-    await customerService.update(customer)
+    try {
+      await customerService.update(customer)
+      notification.success('Customer have been correctly edited.')
+    } catch (e) {
+      notification.error('Problems editing the customer, please try again.')
+    }
 
     thunkApi.dispatch(getCustomers())
   }
@@ -34,9 +45,13 @@ export const deleteCustomers = createAsyncThunk(
       customerService.delete(customerId)
     )
 
-    await Promise.all([promises])
-
-    thunkApi.dispatch(getCustomers())
+    try {
+      await Promise.all([promises])
+      thunkApi.dispatch(getCustomers())
+      notification.success('The customers have been deleted.')
+    } catch (e) {
+      notification.error('Problems trying to delete the customers.')
+    }
   }
 )
 

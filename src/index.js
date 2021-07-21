@@ -8,6 +8,8 @@ import { setupInterceptors } from 'app/config/axios.interceptors'
 import 'styles/main.scss'
 import './index.css'
 
+import 'react-notifications-component/dist/theme.css'
+
 setupInterceptors()
 
 ReactDOM.render(

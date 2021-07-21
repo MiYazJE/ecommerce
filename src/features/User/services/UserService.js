@@ -5,7 +5,7 @@ export default class UserService {
     const { data: users } = await axios.get(`/users`)
 
     const userExists = users.find(
-      (user) => user.username === username && password === password
+      (user) => user.username === username && user.password === password
     )
 
     if (!userExists) {

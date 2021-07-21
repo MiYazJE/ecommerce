@@ -1,0 +1,15 @@
+.notification-container--center {
+  height: auto !important;
+}
+
+.notifications-component {
+  position: inherit !important;
+  height: auto !important;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}

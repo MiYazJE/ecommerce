@@ -3,7 +3,7 @@
 .dashboard {
   display: grid;
   height: calc(100vh - #{$header-height});
-  grid-template-columns: 100px auto;
+  grid-template-columns: 100px 1fr;
 
   .dashboard-content {
     padding: 2em;

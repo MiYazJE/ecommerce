@@ -4,7 +4,7 @@ import ROUTES from 'common/constants/paths'
 import { userSelector } from 'features/User/redux/selectors/userSelectors'
 import { logout } from 'features/User/redux/slices/userSlice'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link, useLocation, useParams } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 import './header.scss'
 

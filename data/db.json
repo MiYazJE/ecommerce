@@ -38,10 +38,16 @@
   ],
   "customers": [
     {
-      "id": 1,
-      "name": "Mercadona SL",
+      "name": "Mercadona SL jeje",
       "address": "Valencia",
-      "phone": "961758478"
+      "phone": "961758478",
+      "id": 1
+    },
+    {
+      "name": "Rubén Saiz Serrano",
+      "address": "46230, C/picassent nº26b p/2 p/3",
+      "phone": "673410447",
+      "id": 3
     }
   ],
   "products": [
