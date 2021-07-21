@@ -33,8 +33,8 @@ const SignIn = () => {
     formState: { errors }
   } = useForm({
     defaultValues: {
-      username: 'ruben',
-      password: 'holamundo'
+      username: '',
+      password: ''
     },
     mode: 'onBlur',
     resolver: yupResolver(schema)
@@ -79,7 +79,7 @@ const SignIn = () => {
           Sign In
         </Button>
         {userLoggedFail && (
-          <Alert severity="error">Username or password are incorrects!</Alert>
+          <Alert severity="error">Username or password are incorrect!</Alert>
         )}
         {userSuccessRegistered && (
           <Alert severity="success">

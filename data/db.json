@@ -1,39 +1,9 @@
 {
   "users": [
     {
-      "id": 1,
       "username": "ruben",
-      "password": "holamundo"
-    },
-    {
-      "id": 2,
-      "username": "pepe",
-      "password": "pepito"
-    },
-    {
-      "username": "caca",
-      "password": "Gedesco21!",
-      "id": 3
-    },
-    {
-      "username": "joselico",
-      "password": "Joselico21!",
-      "id": 4
-    },
-    {
-      "username": "pepe",
-      "password": "Gedesco21!",
-      "id": 5
-    },
-    {
-      "username": "juanico",
-      "password": "Juanico21!",
-      "id": 6
-    },
-    {
-      "username": "pepe",
-      "password": "Gedesco21!",
-      "id": 7
+      "password": "Holamundo1!",
+      "id": 2
     }
   ],
   "customers": [
@@ -42,12 +12,6 @@
       "address": "Valencia",
       "phone": "961758478",
       "id": 1
-    },
-    {
-      "name": "Rubén Saiz Serrano",
-      "address": "46230, C/picassent nº26b p/2 p/3",
-      "phone": "673410447",
-      "id": 3
     }
   ],
   "products": [

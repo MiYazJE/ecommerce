@@ -38,6 +38,8 @@ const userSlice = createSlice({
   },
   extraReducers: {
     [signIn.pending](state) {
+      state.userSuccessRegistered = false
+      state.userLoggedFail = false
       state.isUserFetching = true
     },
     [signIn.rejected](state) {
@@ -53,6 +55,7 @@ const userSlice = createSlice({
     },
 
     [signUp.pending](state) {
+      state.userLoggedFail = false
       state.isUserFetching = true
     },
     [signUp.rejected](state) {
